@@ -1,0 +1,77 @@
+{
+    "residentChurch": {
+        "name": "House on the Rock, Nnewi",
+        "slug": "hotr-nnewi",
+        "description": "Home for All",
+        "address": "Nnewi, Anambra State, Nigeria",
+        "events": [
+            {
+                "id": 1,
+                "title": "Super Sunday Service",
+                "date": "Sundays at 9:00 AM",
+                "description": "Join us for an explicit time in God's presence."
+            },
+            {
+                "id": 2,
+                "title": "Mid-Week Service",
+                "date": "Wednesdays at 5:00 PM",
+                "description": "Digging deep into the Word."
+            }
+        ]
+    },
+    "media": {
+        "liveVideoId": "dQw4w9WgXcQ",
+        "channelId": "UC_CHANNEL_ID"
+    },
+    "pastorMrs": {
+        "name": "Pastor Mrs. Inkechi Renee J.P.",
+        "bio": "A pillar of strength and grace, Pastor Mrs. Inkechi Renee serves alongside her husband with a heart full of love for God's people. She is a mentor to many women and a voice of wisdom.",
+        "ministriesBio": "She leads the 'Deborah's Arising' movement, empowering women to take their place in ministry and the marketplace.",
+        "socials": {
+            "instagram": "https://instagram.com",
+            "facebook": "https://facebook.com"
+        }
+    },
+    "pastor": {
+        "name": "Jude Peters Ndukwe",
+        "title": "Senior Pastor",
+        "bioShort": "Passionate about raising a generation of kings and priests.",
+        "bioLong": "Pastor Jude Peters Chuckwuebuka is a dynamic minister of the Gospel, dedicated to raising a generation of kingdom ambassadors who are empowered to take over systems and sectors for Christ. With a unique calling to bridge the gap between ancient spirituality and modern relevance, he serves as a beacon of hope and transformation.",
+        "socials": {
+            "spotify": "#",
+            "appleMusic": "#",
+            "facebook": "#",
+            "instagram": "#",
+            "youtube": "https://www.youtube.com/@JPNdukwe"
+        }
+    },
+    "values": {
+        "impact": [
+            {
+                "id": "1",
+                "title": "Educational Outreach",
+                "category": "Education",
+                "description": "Providing scholarships to underprivileged students to ensure no child is left behind.",
+                "image": "education.jpg"
+            },
+            {
+                "id": "2",
+                "title": "Medical Missions",
+                "category": "Health",
+                "description": "Free medical checkups and treatments for rural communities.",
+                "image": "health.jpg"
+            },
+            {
+                "id": "3",
+                "title": "Widows Empowerment",
+                "category": "Social",
+                "description": "Skill acquisition programs and financial support for widows.",
+                "image": "widows.jpg"
+            }
+        ]
+    },
+    "sermons": {
+        "telegram": "https://t.me/judepeters",
+        "youtube": "https://www.youtube.com/@JPNdukwe"
+    }
+}
