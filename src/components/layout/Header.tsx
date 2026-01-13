@@ -24,19 +24,40 @@ const Header = () => {
     { name: 'YouTube', icon: <Youtube size={18} />, url: config.pastor.socials.youtube },
   ];
 
+  // Scroll handler
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setMobileMenuOpen(false); // Close mobile menu if open
+    }
+  };
+
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container header-content">
-        <Link to="/" className="logo">Jude Peters Ministries</Link>
+        <Link to="/" className="logo" onClick={() => scrollToSection('home')}>Jude Peters Ministries</Link>
 
         {/* Desktop Nav */}
         <nav className="desktop-nav">
-          {navLinks.map((link) => (
-            <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="nav-link">
-              {link.icon}
-              <span className="sr-only">{link.name}</span>
-            </a>
-          ))}
+          <div className="internal-links" style={{ display: 'flex', gap: '1.5rem', marginRight: '2rem' }}>
+            <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
+            <button onClick={() => scrollToSection('media')} className="nav-link">Media</button>
+            <button onClick={() => scrollToSection('values')} className="nav-link">Values</button>
+            <button onClick={() => scrollToSection('pastor-mrs')} className="nav-link">Pastor Mrs.</button>
+            <button onClick={() => scrollToSection('sermons')} className="nav-link">Sermons</button>
+            <button onClick={() => scrollToSection('church')} className="nav-link">Resident Church</button>
+            <button onClick={() => scrollToSection('visual')} className="nav-link">Visual</button>
+          </div>
+
+          <div className="social-links" style={{ display: 'flex', gap: '1rem', borderLeft: '1px solid var(--glass-border)', paddingLeft: '1.5rem' }}>
+            {navLinks.map((link) => (
+              <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="nav-link">
+                {link.icon}
+                <span className="sr-only">{link.name}</span>
+              </a>
+            ))}
+          </div>
 
           <div className="dropdown-container">
             <button className="btn-primary" onClick={() => setDropdownOpen(!dropdownOpen)}>
@@ -76,14 +97,14 @@ const Header = () => {
             style={{ height: '100vh', position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 999, paddingTop: '100px', background: 'black' }}
           >
             {/* Internal Navigation */}
-            <Link to="/" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-            <Link to="/about" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
-            <Link to="/media" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>Media</Link>
-            <Link to="/values" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>Values & Impact</Link>
-            <Link to="/pastor-mrs" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>Pastor Mrs.</Link>
-            <Link to="/sermons" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>Sermons</Link>
-            <Link to="/church" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>Resident Church</Link>
-            <Link to="/visual" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>Visual</Link>
+            <button className="mobile-link" onClick={() => scrollToSection('home')}>Home</button>
+            <button className="mobile-link" onClick={() => scrollToSection('about')}>About</button>
+            <button className="mobile-link" onClick={() => scrollToSection('media')}>Media</button>
+            <button className="mobile-link" onClick={() => scrollToSection('values')}>Values & Impact</button>
+            <button className="mobile-link" onClick={() => scrollToSection('pastor-mrs')}>Pastor Mrs.</button>
+            <button className="mobile-link" onClick={() => scrollToSection('sermons')}>Sermons</button>
+            <button className="mobile-link" onClick={() => scrollToSection('church')}>Resident Church</button>
+            <button className="mobile-link" onClick={() => scrollToSection('visual')}>Visual</button>
 
             <div className="divider" style={{ height: '1px', background: 'var(--glass-border)', margin: '1rem 0' }}></div>
 

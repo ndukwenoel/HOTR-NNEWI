@@ -3,11 +3,20 @@ import config from '../data/config.json';
 import heroImage from '../assets/hero-pastor.png';
 import './Home.css';
 
+// Import other sections
+import About from './About';
+import Media from './Media';
+import Values from './Values';
+import PastorMrs from './PastorMrs';
+import SermonArchive from './SermonArchive';
+import ResidentChurch from './ResidentChurch';
+import ChurchVisual from './ChurchVisual';
+
 const Home = () => {
     return (
         <div className="home-container">
             {/* Hero Section */}
-            <section className="hero">
+            <section id="home" className="hero">
                 <div className="hero-background">
                     <img src={heroImage} alt="Pastor Jude Peters Ndukwe" />
                     <div className="hero-overlay"></div>
@@ -38,9 +47,33 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Placeholder for next sections */}
-            <section className="debug-spacer" style={{ height: '100vh', background: 'var(--color-bg)' }}>
-                {/* Just so we can scroll */}
+            {/* Stacked Sections */}
+            <section id="about">
+                <About />
+            </section>
+
+            <section id="media">
+                <Media />
+            </section>
+
+            <section id="values">
+                <Values />
+            </section>
+
+            <section id="pastor-mrs">
+                <PastorMrs />
+            </section>
+
+            <section id="sermons">
+                <SermonArchive />
+            </section>
+
+            <section id="church">
+                <ResidentChurch />
+            </section>
+
+            <section id="visual">
+                <ChurchVisual />
             </section>
         </div>
     );
