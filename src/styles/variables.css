@@ -1,13 +1,28 @@
 :root {
-  --color-bg: #0a0a0a;
+  /* Colors */
+  --color-bg: #050505;
+  /* Deeper black */
   --color-text: #ffffff;
-  --color-text-muted: #a0a0a0;
-  --color-primary: #d4af37; /* Gold/Metallics */
-  --color-secondary: #8a2be2; /* Deep Purple */
-  --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --animation-slow: 0.5s ease-in-out;
+  --color-text-muted: #9ca3af;
+  --color-primary: #d4af37;
+  /* Gold/Metallics */
+  --color-secondary: #8a2be2;
+  /* Deep Purple */
+
+  /* Typography */
+  --font-main: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+
+  /* Layout & Spacing - "Antigravity Flow" */
+  --section-spacing: 160px;
+  /* Increased breathing room */
+  --container-width: 1200px;
+
+  /* Effects */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --animation-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Smoother, "heavy" ease */
 }
 
 @media (prefers-reduced-motion: no-preference) {

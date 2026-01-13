@@ -5,7 +5,18 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    /* Hero stands alone at top */
 }
+
+/* Global Section Flow for SPA */
+.home-container section:not(#home):not(#visual) {
+    padding-top: var(--section-spacing);
+    padding-bottom: var(--section-spacing);
+    position: relative;
+}
+
+/* Alternate background for visual rhythm? Optional, keeping dark for now */
+
 
 .hero-background {
     position: absolute;
