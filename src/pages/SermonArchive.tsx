@@ -3,6 +3,9 @@ import { Download, PlayCircle, Mic, Video } from 'lucide-react';
 import config from '../data/config.json';
 import './SermonArchive.css';
 
+import audioBg from '../assets/pastor-2.jpg';
+import videoBg from '../assets/pastor-1.jpg';
+
 const SermonArchive = () => {
     return (
         <div className="sermon-archive container">
@@ -24,6 +27,11 @@ const SermonArchive = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
+                    style={{
+                        backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(${audioBg})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }}
                 >
                     <div className="card-header">
                         <Mic size={32} className="card-icon" />
@@ -50,6 +58,11 @@ const SermonArchive = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 }}
+                    style={{
+                        backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(${videoBg})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }}
                 >
                     <div className="card-header">
                         <Video size={32} className="card-icon" />

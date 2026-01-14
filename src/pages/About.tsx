@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import config from '../data/config.json';
 import './About.css';
 
+import pastorImg from '../assets/pastor-3.jpg';
+
 const About = () => {
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({ target: containerRef });
@@ -69,10 +71,7 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    <div className="image-placeholder">
-                        {/* Use hero image as placeholder or generate a new one later */}
-                        <div className="placeholder-text">Portrait</div>
-                    </div>
+                    <img src={pastorImg} alt="Pastor Jude Peters" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </motion.div>
             </div>
         </div>

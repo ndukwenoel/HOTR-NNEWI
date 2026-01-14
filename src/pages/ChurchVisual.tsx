@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import config from '../data/config.json';
-import visualImg from '../assets/church-visual.png';
+import visualImg from '../assets/hero-pulpit.jpg';
 import './ChurchVisual.css';
 
 const ChurchVisual = () => {

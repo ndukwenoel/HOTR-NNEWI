@@ -3,10 +3,16 @@ import { Calendar, MapPin, Clock } from 'lucide-react';
 import config from '../data/config.json';
 import './ResidentChurch.css';
 
+import churchBg from '../assets/pastor-4.jpg';
+
 const ResidentChurch = () => {
     return (
         <div className="church-page container">
-            <div className="church-hero">
+            <div className="church-hero" style={{
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${churchBg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+            }}>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}

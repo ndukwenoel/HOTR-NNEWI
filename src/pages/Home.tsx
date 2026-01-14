@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import config from '../data/config.json';
-import heroImage from '../assets/hero-pastor.png';
+import heroImage from '../assets/hero-pulpit.jpg';
 import './Home.css';
 
 // Import other sections
